@@ -1,0 +1,9 @@
+{
+  "name": "orion-weave-public",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --check demo/app.mjs && node --check demo/model.mjs && node check_public.mjs"
+  }
+}

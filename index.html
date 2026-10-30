@@ -16,13 +16,14 @@
     @media(max-width:850px){.hero{padding-top:55px}.hero-inner{gap:5px}.hero-aside{padding-left:0}.section-heading{gap:30px}.feature{padding:23px}.hierarchy{padding:24px}.path{gap:9px}.path-node{min-width:105px;font-size:.78rem}.method-grid{gap:40px}}
     @media(max-width:650px){.wrap{width:calc(100% - 40px)}.nav{min-height:76px;gap:12px}.brand{font-size:.88rem;gap:8px}.brand svg{width:28px}.nav-links{gap:16px;font-size:.72rem}.nav-links a:last-child{display:none}.hero-inner{grid-template-columns:1fr}.hero-aside{max-width:350px;width:100%;margin:20px auto 0}.hero-copy{font-size:1rem}.status{gap:14px;margin-top:28px}.status span{width:100%}section{padding:52px 0}.section-heading,.method-grid{grid-template-columns:1fr;gap:24px}.features,.sources{grid-template-columns:1fr}.feature{min-height:0}.feature+.feature{border-left:0;border-top:1px solid var(--line)}.number{margin-bottom:16px}.hierarchy-head{align-items:flex-start;flex-direction:column;gap:8px}.path{gap:9px}.path-node{min-width:96px;min-height:68px;padding:9px 12px}.arrow{font-size:.8rem}.closing-inner,.footer-inner{align-items:flex-start;flex-direction:column;gap:20px}.source-top{flex-wrap:wrap}.chinese{font-size:.87rem;letter-spacing:.06em}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-  </style>
+  .demo-cta{display:inline-flex;gap:24px;align-items:center;background:var(--gold);color:#112131;padding:12px 20px;border-radius:5px;text-decoration:none;font-size:.9rem;font-weight:600;margin-top:14px}.demo-cta:hover{color:#112131;background:#f0ce92}.demo-caption{font-size:.75rem;color:var(--muted)}
+</style>
 </head>
 <body>
   <header>
     <nav class="wrap nav" aria-label="Main navigation">
       <a class="brand" href="#top" aria-label="Orion Weave home"><svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><path d="m5 11 9 20 9-23 11 21M5 11l18-3M14 31l20-2" stroke="#e3bd79" stroke-width="1.2"/><g fill="#e3bd79"><circle cx="5" cy="11" r="2.5"/><circle cx="14" cy="31" r="2.5"/><circle cx="23" cy="8" r="3"/><circle cx="34" cy="29" r="2.5"/></g></svg>ORION WEAVE</a>
-      <div class="nav-links"><a href="#explore">The experience</a><a href="#data">Data sources</a><a href="#method">Methodology</a></div>
+      <div class="nav-links"><a href="./demo/">Try the demo ↗</a><a href="#explore">The experience</a><a href="#data">Data sources</a><a href="#method">Methodology</a></div>
     </nav>
   </header>
   <main id="top">
@@ -33,7 +34,7 @@
             <div class="eyebrow">A constellation of research</div>
             <h1>Find the threads<br><span>between ideas.</span></h1>
             <p class="hero-copy">Scientific literature is vast. Orion Weave helps you trace its connections—from broad research themes to the techniques, methods, and architectures within them.</p>
-            <p class="chinese" lang="zh-Hant">在浩瀚文獻中，看見知識的連結。</p>
+            <p class="chinese" lang="zh-Hant">在浩瀚文獻中，看見知識的連結。</p><p><a class="demo-cta" href="./demo/">Explore the public demo <span aria-hidden="true">↗</span></a></p><p class="demo-caption">Read-only exploration · arXiv metadata · No account required</p>
           </div>
           <div class="hero-aside">
             <svg class="constellation" viewBox="0 0 440 370" role="img" aria-labelledby="graph-title graph-desc">
@@ -53,7 +54,7 @@
             <div class="figure-note">Illustrative topic constellation · not measured data</div>
           </div>
         </div>
-        <div class="status" aria-label="Project status"><span><i class="dot" aria-hidden="true"></i>Non-commercial research prototype</span><span><i class="dot neutral" aria-hidden="true"></i>Literature window: 2023–2026</span><span><i class="dot pending" aria-hidden="true"></i>Application currently runs locally</span></div>
+        <div class="status" aria-label="Project status"><span><i class="dot" aria-hidden="true"></i>Non-commercial research prototype</span><span><i class="dot neutral" aria-hidden="true"></i>Literature window: 2023–2026</span><span><i class="dot pending" aria-hidden="true"></i>Read-only arXiv demo available</span></div>
       </div>
     </div>
     <section id="explore">
@@ -61,7 +62,7 @@
         <div class="section-heading"><div><div class="eyebrow">01 / The experience</div><h2>Start with a field.<br>Follow a thread.</h2></div><p>Explore relationships through a spatial map. Move from the overview to a specific approach while keeping its research context in view.</p></div>
         <div class="features">
           <article class="feature"><span class="number">01 — SCALE</span><h3>See the shape of a field.</h3><p>Topic circle area reflects its paper count under the selected filters and counting basis. More matching papers produce a larger circle.</p></article>
-          <article class="feature"><span class="number">02 — TIME</span><h3>Inspect change over time.</h3><p>Right-click a topic to inspect annual publication counts for 2023, 2024, 2025, and 2026. The interface labels whether counts represent query results or collected samples.</p></article>
+          <article class="feature"><span class="number">02 — TIME</span><h3>Inspect change over time.</h3><p>Right-click a topic to inspect annual sample counts for 2023, 2024, 2025, and 2026. The public demo consistently uses content-supported samples, not whole-library search totals.</p></article>
           <article class="feature"><span class="number">03 — DEPTH</span><h3>Keep unfolding the map.</h3><p>Double-click to expand successive levels. Topics can branch into techniques, methods, and architectures, distinguished by dashed circle boundaries.</p></article>
         </div>
         <div class="hierarchy"><div class="hierarchy-head"><h3>From a broad theme to a specific technique</h3><span>Illustrative hierarchy · no quantitative values</span></div><div class="path" aria-label="LLM, then Efficient LLM, then PEFT, then LoRA, then QLoRA"><span class="path-node">LLM<small>Topic</small></span><span class="arrow" aria-hidden="true">→</span><span class="path-node">Efficient LLM<small>Subtopic</small></span><span class="arrow" aria-hidden="true">→</span><span class="path-node refined">PEFT<small>Method</small></span><span class="arrow" aria-hidden="true">→</span><span class="path-node refined">LoRA<small>Technique</small></span><span class="arrow" aria-hidden="true">→</span><span class="path-node refined">QLoRA<small>Technique</small></span></div><p>Solid boundaries identify research topics. Dashed boundaries identify technical refinements. Expansion follows the available taxonomy; it does not automatically invent new categories.</p></div>
@@ -71,8 +72,8 @@
       <div class="wrap">
         <div class="section-heading"><div><div class="eyebrow">02 / Data sources</div><h2>Know what is<br>behind the map.</h2></div><p>Source coverage, collection dates, and counting methods matter. The prototype makes these distinctions explicit.</p></div>
         <div class="sources">
-          <article class="source"><div class="source-top"><h3>arXiv</h3><span class="pill">Snapshot implemented</span></div><p>The current prototype uses an arXiv metadata snapshot with topic queries, yearly search-result counts, and a collected paper sample for classification and thematic relationships.</p><p>It is a dated research snapshot, not a continuously updated view of all literature.</p><a href="https://info.arxiv.org/help/api/index.html">Official arXiv API documentation ↗</a></article>
-          <article class="source"><div class="source-top"><h3>IEEE Xplore</h3><span class="pill pending">API access pending</span></div><p>Planned Metadata Search API integration will support IEEE bibliographic records, available abstracts, and links to original publication pages, subject to approval and applicable terms.</p><p>IEEE data is not currently represented as an active API-backed collection.</p><a href="https://developer.ieee.org/docs">Official IEEE API documentation ↗</a></article>
+          <article class="source"><div class="source-top"><h3>arXiv</h3><span class="pill">Snapshot implemented</span></div><p>The public demo uses a compact arXiv metadata snapshot, dated 2026-10-23, with content-supported topic memberships and inspectable evidence. Descriptive metadata is available under CC0 1.0.</p><p>This is a finite research sample, not a continuously updated view of all literature. Paper links lead to arXiv; the demo does not host full-text documents.</p><a href="https://info.arxiv.org/help/api/index.html">Official arXiv API documentation ↗</a></article>
+          <article class="source"><div class="source-top"><h3>IEEE Xplore</h3><span class="pill pending">Local edition only</span></div><p>The full local edition supports IEEE Xplore metadata alongside arXiv. IEEE data collection and analysis stay within the locally configured research workflow and applicable terms.</p><p>The public demo contains no IEEE records, IEEE search totals, or API credentials. Public redistribution would require appropriate authorization.</p><a href="https://developer.ieee.org/docs">Official IEEE API documentation ↗</a></article>
         </div>
         <div class="data-note"><span aria-hidden="true">↳</span><div><strong>2026 is a partial year.</strong> Counts reflect data available at the collection date. A shorter observation period should not be interpreted as a decline in research activity.</div></div>
       </div>
@@ -81,15 +82,15 @@
       <div class="wrap method-grid">
         <div><div class="eyebrow">03 / Reading the map</div><h2>Connections,<br>with context.</h2><p>Orion Weave supports literature discovery and research analysis. Its visual relationships are tools for exploration, with a clear distinction between classification, sample evidence, and source search counts.</p></div>
         <div>
-          <details open><summary>What does a connection mean?</summary><p>Hierarchy links represent the project's topic taxonomy. Other relationships indicate papers that co-occur in topic categories within the collected sample. This is a thematic relationship map, not a citation graph or a claim that one paper influenced another.</p></details>
-          <details open><summary>Which papers contribute to a count?</summary><p>Query counts are source-reported search results for defined topic and year queries. Sample counts include only collected records that match the project's classification rules. When technical refinements are displayed, the map switches to the collected-sample basis so circle sizes remain comparable. Topic counts can overlap and should not be summed as unique publications.</p></details>
+          <details open><summary>What does a connection mean?</summary><p>Dashed links represent the project's topic taxonomy. Solid links require direct evidence for both topics in the same paper record, and count distinct works conservatively. Click a solid link to inspect supporting metadata. These are thematic relationships, not citations, causality, verified method adoption, or full-text review.</p></details>
+          <details open><summary>Which papers contribute to a count?</summary><p>The public demo counts only arXiv samples with direct metadata support, plus their navigational ancestor memberships. Uncertain, rejected, comparison-only, and excluded records do not contribute independent relationships. Topic counts can overlap and should not be summed as unique publications. The full local edition additionally retains source-reported query totals for comparison.</p></details>
           <details><summary>What does an empty circle mean?</summary><p>A small hollow marker preserves a category's place in the hierarchy when no matching records are present under the current basis and filters. In sample mode, zero means no matching collected samples; it does not establish that no such papers exist.</p></details>
-          <details><summary>How will IEEE data and credentials be handled?</summary><p>The intended workflow uses approved bibliographic metadata and available abstracts for bounded local research analysis, within IEEE's approved limits and applicable terms. Requests run through a local backend that keeps the API key confidential. Publication records link to their canonical source pages. The project does not download or redistribute paywalled full-text articles.</p></details>
+          <details><summary>What is included in the public version?</summary><p>The public version has no file upload, export, API-key entry, account, or live data-collection functions. It serves a fixed arXiv metadata snapshot and runs interactions in your browser. The full local edition retains collection tools, complete research records, and import/export features. Displayed web content can still be saved by a browser; removing export controls is not copy protection.</p></details>
         </div>
       </div>
     </section>
-    <div class="closing"><div class="wrap closing-inner"><h2>Every paper is a point.<br>Discovery begins with a connection.</h2><p>This page introduces Orion Weave. The research application is a local prototype; a public interactive deployment is not currently available.</p></div></div>
+    <div class="closing"><div class="wrap closing-inner"><h2>Every paper is a point.<br>Discovery begins with a connection.</h2><p>Try the read-only arXiv demo to explore topics, annual sample counts, and evidence. The complete research edition remains a separate local application.</p></div></div>
   </main>
-  <footer><div class="wrap footer-inner"><span>Orion Weave · Independent research prototype</span><span><a href="https://arxiv.org/">arXiv</a> &nbsp; / &nbsp; <a href="https://ieeexplore.ieee.org/">IEEE Xplore</a> &nbsp; · &nbsp; Not affiliated with or endorsed by either service.</span></div></footer>
+  <footer><div class="wrap footer-inner"><span>Orion Weave · Independent research prototype · <a href="./demo/">Public demo</a></span><span><a href="https://arxiv.org/">arXiv</a> &nbsp; / &nbsp; <a href="https://ieeexplore.ieee.org/">IEEE Xplore</a> &nbsp; · &nbsp; Not affiliated with or endorsed by either service.</span></div></footer>
 </body>
 </html>
